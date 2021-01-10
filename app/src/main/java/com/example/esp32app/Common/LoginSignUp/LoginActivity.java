@@ -24,6 +24,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private FirebaseAuth mAuth;
     TextView forgotPwd, regis, email, pwd;
     Button btnSignIn;
+//    CheckBox rememberMe;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,6 +39,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         btnSignIn.setOnClickListener(this);
         forgotPwd = findViewById(R.id.txtForgotPwd);
         forgotPwd.setOnClickListener(this);
+//        rememberMe = findViewById(R.id.remember_me);
     }
     @Override
     public void onStart() {

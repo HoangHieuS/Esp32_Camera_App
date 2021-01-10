@@ -9,6 +9,7 @@ import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
 
+import com.example.esp32app.Admin.AboutUsActivity;
 import com.example.esp32app.R;
 
 
@@ -22,32 +23,22 @@ public class StartScreen extends AppCompatActivity {
     }
 
 
-    public void callLoginScreen(View view) {
+    public void callScreen(View v) {
 
-        Intent intent = new Intent(this,LoginActivity.class);
-
-        Pair[] pairs = new Pair[1];
-        pairs[0] = new Pair<View,String>(findViewById(R.id.login_btn),"transition_login");
-
-
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(StartScreen.this, pairs);
-        startActivity(intent,options.toBundle());
+        switch (v.getId()){
+            case R.id.login_btn:
+                startActivity(new Intent(this, LoginActivity.class));
+                break;
+            case R.id.signUp_btn:
+                startActivity(new Intent(this, RegisActivity.class));
+                break;
+            case R.id.aboutUs_btn:
+                startActivity(new Intent(this, AboutUsActivity.class));
+                break;
+        }
 
     }
 
 
-    public void callSignupScreen(View view) {
 
-        Intent intent = new Intent(this,RegisActivity.class);
-
-        Pair[] pairs = new Pair[1];
-        pairs[0] = new Pair<View,String>(findViewById(R.id.sign_btn),"transition_login");
-
-
-        ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(StartScreen.this, pairs);
-        startActivity(intent,options.toBundle());
-    }
-
-    public void callAboutUsScreen(View view) {
-    }
 }

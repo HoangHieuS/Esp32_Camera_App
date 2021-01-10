@@ -16,7 +16,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="300dp"
-            android:src="@drawable/camera" />
+            android:src="@drawable/doorbell" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -50,31 +50,37 @@
                 android:layout_height="wrap_content"
                 android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:onClick="callLoginScreen"
+                android:background="@color/colorPrimary"
+                android:onClick="callScreen"
                 android:text="@string/login"
                 android:textColor="@color/black"
-                android:transitionName="transition_login"/>
+                android:transitionName="transition_login" />
 
             <Button
-                android:id="@+id/sign_btn"
+                android:id="@+id/signUp_btn"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:onClick="callSignupScreen"
                 android:layout_weight="1"
+                android:background="@color/colorPrimary"
+                android:onClick="callScreen"
                 android:text="@string/sign_up"
-                android:textColor="@color/black" />
+                android:textColor="@color/black"
+                android:transitionName="transition_signUp" />
 
         </LinearLayout>
 
         <Button
+            android:id="@+id/aboutUs_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:layout_weight="1"
+            android:onClick="callScreen"
+            android:background="#00000000"
             android:text="@string/about_us"
-            android:onClick="callAboutUsScreen"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:transitionName="transition_aboutUs" />
 
     </LinearLayout>
 
